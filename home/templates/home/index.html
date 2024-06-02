@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="{% url 'home'%}">Harsha_vrdn</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="{% url 'home'%}">Home</a></li>
+            <li class="nav-item"><a href="{%url 'about'%}">About</a></li>
+            <li class="nav-item"><a href="{%url 'projects'%}">Projects</a></li>
+            <li class="nav-item"><a href="static/pdf/Harsha_resume.pdf" target="_blank">View Resume</a></li>
+            <li class="nav-item"><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+          <img src="{% static 'images/profilepic.png' %}" alt="profile picture" />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Harsha</h1>
+          <p class="section__text__p2">Full-stack Developer</p>
+          <div class="btn-container">
+            <a href="static/pdf/Harsha_resume.pdf" target="_blank">
+                <button class="btn btn-color-1">
+                Download CV
+                </button>
+            </a>
+            <a href="{% url 'contact' %}">
+              <button class="btn btn-color-1">
+                Contact Info
+              </button>
+            </a>
+          </div>
+          <div id="socials-container">
+            <img
+              src="{% static 'images/linkedin.png' %}"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="location.href='https://linkedin.com/'"
+            />
+            <img
+              src="{% static 'images/github.png' %}"
+              alt="My Github profile"
+              class="icon"
+              onclick="location.href='https://github.com/'"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="tech-stack">
+        <h3 class="title">Tech Stack</h1>
+        <div class="tech-stack-elements">
+          <p>Python</p>
+          <p>Django</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>JavaScript</p>
+      </div>
+    <footer style="padding-top: 30px;">
+    </footer>
+    <script src="{% static 'home/js/scripts.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'PressStart2P';
+    src: url("../fonts/PressStart2P-Regular.ttf") format('truetype');
+  }
+  
+  body {
+    font-family: 'PressStart2P', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  p{
+    font-family: 'PressStart2P', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  
+  .title{
+    padding-top: 0;
+    margin: 0;
+  }
+  
+  .tech-stack {
+    margin-top: 0;
+    padding: 0;
+    text-align: center; /* Center the title text */
+  }
+  .tech-stack-elements {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 20px; /* Adjust the spacing between items here */
+  }
+  .tech-stack-elements p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  
+  h3{
+    padding-top: 40px;  
+    color: white;
+  }
+  
+  .navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Updated to make the navbar translucent */
+    padding: 10px 20px;
+    z-index: 1000;
+    width: 98%;
+  }
+  
+  .navbar-brand a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+  }
+  
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-item a:hover {
+    background-color: #555;
+    border-radius: 10px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Added background color for mobile menu */
+    }
+  
+    .navbar-nav.active {
+        display: flex;
+    }
+  
+    .nav-item {
+        margin: 10px 0;
+        text-align: center; /* Center-align nav items on mobile */
+    }
+  
+    .menu-toggle {
+        display: flex;
+    }
+  }
+  
+  section {
+    color: white;
+    padding-top: 4vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+  
+  .section-container {
+    display: flex;
+  }
+  
+  /* PROFILE SECTION */
+  
+  #profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 96vh;
+  }
+  
+  .section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+  }
+  
+  .section__text {
+    align-self: center;
+    text-align: center;
+  }
+  
+  .section__text p {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .section__text__p1 {
+    text-align: center;
+  }
+  
+  .section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  #socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  /* ICONS */
+  
+  .icon {
+    cursor: pointer;
+    height: 2rem;
+  }
+  
+  /* BUTTONS */
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .btn {
+    font-family: "PressStart2P", sans-serif;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+  }
+  
+  .btn-color-1,
+  .btn-color-2 {
+    border: rgb(255, 255, 255) 0.1rem solid;
+  }
+  
+  .btn-color-1:hover,
+  .btn-color-2:hover {
+    cursor: pointer;
+  }
+  
+  .btn-color-1,
+  .btn-color-2:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  
+  .btn-color-1:hover {
+    background: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  .btn-color-2 {
+    color: white;
+    background: none;
+  }
+  
+  .btn-color-2:hover {
+    border: rgb(0, 0, 0) 0.1rem solid;
+  }
+  
+  .btn-container {
+    gap: 1rem;
+  }
+  
+  /* Responsive Adjustments */
+  
+  @media (max-width: 1200px) {
+    #profile {
+        margin: 0 5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #profile {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 2rem;
+    }
+  
+    .section__pic-container {
+        height: 300px;
+        width: 300px;
+    }
+  
+    .title {
+        font-size: 2rem;
+    }
+  }
+  .python{
+    color: white;
+  }

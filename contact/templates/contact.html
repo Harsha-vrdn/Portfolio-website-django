@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'contact/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+  <title>Contact Me</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+        <a href="{% url 'home'%}">Harsha_vrdn</a>
+    </div>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+        <li class="nav-item"><a href="{% url 'about' %}">About</a></li>
+        <li class="nav-item"><a href="{%url 'projects'%}">Projects</a></li>
+        <li class="nav-item"><a href="static/pdf/Harsha_resume.pdf" target="_blank">View Resume</a></li>
+        <li class="nav-item"><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+</nav>
+  <div class="info" style="text-align: center; padding-top: 100px">
+    <h3> 
+      <img
+      src="{% static 'images/email.png' %}"
+      alt="My Github profile"
+      class="icon"
+      />
+      Email me at 
+      <span style="color: rgb(64, 170, 212);">
+        harshavrdnmaroju@gmail.com
+      </span>
+    </h3>
+    <h4 style="color: white; padding-top: 30px;">
+      Or Fill the form, I will reachout to you ASAP
+    </h4>
+  </div>
+  <div class="container1">
+    <form method="post">
+      {% csrf_token %}
+      <!-- Your contact form fields go here -->
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" name="phone" placeholder="9999999999" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="email@email.com" />
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+  </form>
+  </div>
+  <footer style="padding-top: 30px;">
+  </footer>
+</body>
+</html>

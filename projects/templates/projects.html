@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'projects/css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="{% url 'home'%}">Harsha_vrdn</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="{% url 'home'%}">Home</a></li>
+            <li class="nav-item"><a href="{% url 'about' %}">About</a></li>
+            <li class="nav-item"><a href="{%url 'projects'%}">Projects</a></li>
+            <li class="nav-item"><a href="static/pdf/Harsha_resume.pdf" target="_blank">View Resume</a></li>
+            <li class="nav-item"><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="cards">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-duotone fa-apartment"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-duotone fa-apartment"></i>
+                <div class="card-info-title">
+                  <h3>Bulk mail sender</h3>  
+                  <h4>A python script which helps sending customized mails to multiple people.</h4>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-duotone fa-unicorn"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-duotone fa-unicorn"></i>
+                <div class="card-info-title">
+                  <h3>Django website - Yuphoria</h3>  
+                  <h4>A website to convert text into morse code and place a Tshirt order</h4>
+                </div>    
+              </div>  
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-duotone fa-blender-phone"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-duotone fa-blender-phone"></i>
+                <div class="card-info-title">
+                  <h3>Django website- Hasgu</h3>  
+                  <h4>An E-commerce store which sells customized T-shirts for your name.</h4>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-duotone fa-person-to-portal"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-duotone fa-person-to-portal"></i>
+                <div class="card-info-title">
+                  <h3>WebScrapping- Urban Dictionary</h3>  
+                  <h4>A python script to scrape data from a website</h4>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-image">
+              <i class="fa-duotone fa-person-from-portal"></i>
+            </div>
+            <div class="card-info-wrapper">
+              <div class="card-info">
+                <i class="fa-duotone fa-person-from-portal"></i>
+                <div class="card-info-title">
+                  <h3>2 Dimensional Reimann problem</h3>  
+                  <h4>Solving the 2 Dimensional riemann problem solved using Finite volume method in C++</h4>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+    <script src="{% static 'home/js/scripts.js' %}"></script>
+    <script src="{% static 'projects/js/scripts.js' %}"></script>
+</body>
+</html>
