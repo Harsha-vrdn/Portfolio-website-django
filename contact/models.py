@@ -44,10 +44,10 @@ class Contactus(models.Model):
 
         # Email to the user
         user_subject = 'Regarding Your Contact Request'
-        user_body = f'Hello {self.name},\n\nThank you for reaching out to us. We will get back to you shortly.\n\nBest regards,\nYour Company'
+        user_body = f'Hello {self.name},\n\nThank you for reaching out, I would love to have a conversation with you! You can contact me via email on harshavrdnmaroju@gmai.com or you can call me on +91 9063362001(10AM to 6PM IST) or on whatsapp.\n\nBest regards,\nHarsha'
         self.send_email(self.email, user_subject, user_body, attachment_path)
 
         # Email to the admin
         admin_subject = f'New Contact Request from {self.name}'
         admin_body = f'You have received a new contact request.\n\nName: {self.name}\nPhone: {self.phone}\nEmail: {self.email}\nSubject: {self.subject}'
-        self.send_email(admin_email, admin_subject, admin_body, attachment_path)
+        self.send_email(admin_email, admin_subject, admin_body, attachment_path=None)
